@@ -1,0 +1,85 @@
+body,
+#root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%);
+  font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+}
+
+.infinite-scroll-app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 2rem 1rem;
+  text-align: center;
+}
+
+.infinite-scroll-app h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #3b3b5c;
+  margin-bottom: 0.5rem;
+}
+
+.infinite-scroll-app p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.image-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(80, 80, 180, 0.1);
+  overflow: hidden;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s;
+}
+.image-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(80, 80, 180, 0.13);
+}
+.image-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.loader {
+  width: 100%;
+  padding: 2rem 0 1rem 0;
+  color: #6366f1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 700px) {
+  .image-card {
+    width: 98vw;
+    max-width: 340px;
+  }
+  .image-card img {
+    height: 140px;
+  }
+  .image-list {
+    gap: 1rem;
+  }
+}
+
+/* Remove default Vite/React styles */
+.logo,
+.card,
+.read-the-docs {
+  display: none !important;
+}
