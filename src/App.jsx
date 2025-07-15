@@ -5,9 +5,7 @@ import "./App.css";
 const getImageUrl = (id) => `https://picsum.photos/id/${id % 1000}/400/300`;
 
 function App() {
-  const [images, setImages] = useState(
-    Array.from({ length: 10 }, (_, i) => i + 1)
-  );
+  const [images, setImages] = useState(Array.from({ length: 10 }, (_, i) => i + 1));
   const [loading, setLoading] = useState(false);
   const loaderRef = useRef(null);
 
@@ -38,7 +36,7 @@ function App() {
   return (
     <div className="infinite-scroll-app">
       <h1>
-        Infinite Image Gallery{" "}
+        Infinite Image Gallery{' '}
         <span role="img" aria-label="gallery">
           🖼️
         </span>
